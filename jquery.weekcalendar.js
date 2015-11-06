@@ -81,7 +81,7 @@
         resizable: function(calEvent, element) {
           return true;
         },
-        eventClick: function(calEvent, element, dayFreeBusyManager, 
+        eventClick: function(calEvent, element, dayFreeBusyManager,
                                                       calendar, clickEvent) {
         },
         eventRender: function(calEvent, element) {
@@ -99,14 +99,14 @@
         },
         eventResize: function(calEvent, element) {
         },
-        eventNew: function(calEvent, element, dayFreeBusyManager, 
+        eventNew: function(calEvent, element, dayFreeBusyManager,
                                                     calendar, mouseupEvent) {
         },
         eventMouseover: function(calEvent, $event) {
         },
         eventMouseout: function(calEvent, $event) {
         },
-        eventDelete: function(calEvent, element, dayFreeBusyManager, 
+        eventDelete: function(calEvent, element, dayFreeBusyManager,
                                                       calendar, clickEvent) {
             calendar.weekCalendar('removeEvent',calEvent.id);
 	},
@@ -1500,7 +1500,7 @@
           var eventClass, eventHtml, $calEventList, $modifiedEvent;
 
           eventClass = calEvent.id ? 'wc-cal-event' : 'wc-cal-event wc-new-cal-event';
-          eventHtml = '<div class=\"' + eventClass + ' ui-corner-all\">';
+          eventHtml = '<div class=\"' + eventClass + ' \">';
           eventHtml += '<div class=\"wc-time ui-corner-top\"></div>';
           eventHtml += '<div class=\"wc-title\"></div></div>';
 

@@ -75,7 +75,7 @@ $(document).ready(function() {
 
       },
       eventDrop : function(calEvent, $event) {
-        
+
       },
       eventResize : function(calEvent, $event) {
       },
@@ -155,15 +155,15 @@ $(document).ready(function() {
          events : [
             {
                "id":1,
-               "start": new Date(year, month, day, 12),
-               "end": new Date(year, month, day, 13, 30),
-               "title":"Lunch with Mike"
+               "start": new Date(year, month, day - 1, 09),
+               "end": new Date(year, month, day - 1, 12),
+               "title":"1"
             },
             {
                "id":2,
-               "start": new Date(year, month, day, 14),
-               "end": new Date(year, month, day, 14, 45),
-               "title":"Dev Meeting"
+               "start": new Date(year, month, day - 1, 13),
+               "end": new Date(year, month, day - 1, 16),
+               "title":"1"
             },
             {
                "id":3,

@@ -34,6 +34,22 @@
     background: #ffc;
     border: 1px solid #dda;
   }
+
+  .wc-container .ui-resizable-s {
+    display: none !important;
+  }
+  .wc-cal-event .wc-time {
+    display: none;
+  }
+  .wc-cal-event {
+    /*opacity: 0.5;*/
+  }
+  .wc-cal-event .wc-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+  }
   </style>
 
   <script type='text/javascript' src='libs/jquery-1.4.4.min.js'></script>
@@ -50,21 +66,23 @@
   $(document).ready(function() {
     $('#calendar').weekCalendar({
       data: 'events.json',
-      date: new Date('2009-05-10T13:15:00.000+10:00'),
-      minDate: new Date('2009-05-01T13:15:00.000+10:00'),
-      maxDate: new Date('2009-05-20T13:15:00.000+10:00'),
+      date: new Date('2015-11-04T13:15:00.000+10:00'),
+      minDate: new Date('2015-11-01T13:15:00.000+10:00'),
+      maxDate: new Date('2015-11-20T13:15:00.000+10:00'),
       switchDisplay: {'1 day': 1,'3 days': 3,'Work week': 5, 'Full week': 7},
       timeslotsPerHour: 4,
       height: function($calendar) {
         return $(window).height() - $('h1').outerHeight() - $('.description').outerHeight();
       },
       eventRender: function(calEvent, $event) {
+        $event.css('backgroundColor', calEvent.backgroundColor);
+        $event.css('color', calEvent.textColor);
         if (calEvent.end.getTime() < new Date().getTime()) {
-          $event.css('backgroundColor', '#aaa');
-          $event.find('.time').css({
-            backgroundColor: '#999',
-            border:'1px solid #888'
-          });
+          // $event.css('backgroundColor', '#aaa');
+          // $event.find('.time').css({
+          //   backgroundColor: '#999',
+          //   border:'1px solid #888'
+          // });
         }
       },
       eventNew: function(calEvent, $event) {
